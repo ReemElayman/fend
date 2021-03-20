@@ -1,11 +1,8 @@
 function handleSubmit(event) {
     event.preventDefault()
 
-    // check what text was put into the form field
     let url = document.getElementById('url').value
     if(Client.checkForURL(url)){
-    
-
 
     document.getElementById("analysis").innerHTML='<p id="msg">waiting for the results ....</p>'
 
@@ -44,7 +41,10 @@ function handleSubmit(event) {
         </table>`;
             console.log(data)
         });
-      }else{
+
+
+      }
+      else{
         document.getElementById("analysis").innerHTML='<p id="err">Invalid URL please enter a valid one.</p>'
       }
 }

@@ -1,37 +1,26 @@
-# Front End Nanodegree Program
-
-Front End Nanodegree Content & Project Resources
-
 ## Table of Contents
 
-* [Projects](#projects)
-* [Courses](#courses)
-* [Style-Guide](#style-guide)
+* [Overview](#overview)
+* [Usage](#usage)
 
-## Projects
 
-The following is a list of current projects required to complete the Front End Nanodegree.
+## Overview
 
-Note that projects that do not include associated starter code are not linked here.
+Sentiment Analyzer is a tool that uses MeaningCloud API to  analyze a given article url and display its sentiment results. The app uses Express framework and Nodejs as a backend server. In addtion to the WebPack build tool.
 
-1. Personal Blog Website
-2. [Landing Page](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
-3. [Weather Journal App](https://github.com/udacity/fend/tree/refresh-2019/projects/weather-journal-app)
-4. [Evaluate A News Article with Natural Language Processing](https://github.com/udacity/fend/tree/refresh-2019/projects/evaluate-news-nlp)
-5. Capstone - Travel App
+## Usage
 
-## Courses
+1- Install all npm packages
 
-The following is a list of the courses associated with the Front End Nanodegree.
+* npm install
 
-* C1 - CSS, Website Layout, Website Components
-* C2 - JavaScript & The DOM
-* C3 - Web API's and Asynchronous Applications
-* C4 - Build Tools and Single Page Web Apps
-* C5 - Capstone
+2-Build the project using webpack
 
-## Style-Guide
+* npm run build-prod
 
-See below for the Udacity Style Guide used thoroughout the Front End Nanodegree.
+3-Run the server
 
-* [Nanodegree Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/)
+* npm run start
+
+
+
