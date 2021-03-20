@@ -6,13 +6,9 @@ function handleSubmit(event) {
     console.log(url)
     //Client.checkForName(formText)
 
-    // console.log("::: Form Submitted :::")
-    // fetch(`http://localhost:8082/evaluate/${formText}`)
-    // .then(res => res.json())
-    // .then(function(res) {
-    //     document.getElementById('results').innerHTML = res
-    // })
 
+
+    document.getElementById("analysis").innerHTML='<p id="msg">waiting for the results ....</p>'
 
 
     async function postData(url = '', data = {}) {
@@ -29,7 +25,24 @@ function handleSubmit(event) {
       
       postData('http://localhost:8082/evaluate', {url})
         .then(data => {
-            document.getElementById('results').innerHTML = data.agreement
+          document.getElementById("analysis").innerHTML=
+        ` <table>
+          <tr>
+            <th>Agreement</th>
+            <th>Score Tag</th>
+            <th>Subjectivity</th>
+            <th>Confidence</th>
+            <th>Irony</th>
+            
+          </tr>
+          <tr>
+            <td>${data.agreement}</td>
+            <td>${data.score_tag}</td>
+            <td>${data.subjectivity}</td>
+            <td>${data.confidence}</td>
+            <td>${data.irony}</td>
+          </tr>
+        </table>`;
             console.log(data)
         });
 }
