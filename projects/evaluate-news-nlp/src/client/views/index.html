@@ -14,30 +14,50 @@
 
         <header>
             <div class="">
-                Logo
+                <div id="divtitle">   
+                    <p id="title1" >Sentiment Analyzer</p>
+                </div>
+
+                <img src="./assets/logo.jpg" ></img>
             </div>
-            <div class="">
-                navigation
-            </div>
+           
+    
         </header>
 
         <main>
             <section>
                 <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <label id="urllabel">Enter the article/blog URL to analyze</label>
+                    <input id="url" type="text" name="input" value="" placeholder="URL">
+                    <input type="submit" class="button1" name="analyze" value="Analyze" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <p  id="results">Sentiment Results</p>
+                <div>
+               
+                <table>
+                    <tr>
+                      <th>Agreement</th>
+                      <th>Score Tag</th>
+                      <th>Subjectivity</th>
+                      <th>Confidence</th>
+                      <th>Irony</th>
+                      
+                    </tr>
+                    <tr>
+                      <td>agreement</td>
+                      <td>P</td>
+                      <td>subjective</td>
+                      <td>98</td>
+                      <td>ironic</td>
+                    </tr>
+                  </table>
+                </div>
             </section>
         </main>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
 
     </body>
 </html>

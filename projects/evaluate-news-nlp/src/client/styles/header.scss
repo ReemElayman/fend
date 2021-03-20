@@ -1,5 +1,33 @@
 header {
-    display: flex;
     justify-content: space-between;
-    padding: 10px 40px;
+   
 }
+
+
+#divtitle{
+   
+    width: 100%;
+    background-color:black;
+    overflow: hidden;
+    color: white;
+    height: 60px;
+ 
+}
+#title1{
+    font-size: 40px;
+    font-family: fantasy;
+    margin-left: 38%;
+    margin-top: 10px;
+    
+    
+}
+img{
+   
+    margin-top: 10px;
+    margin-left: 33%;
+    margin-bottom: 0;
+   
+    width: 35%;
+    height: 100%;
+}
+

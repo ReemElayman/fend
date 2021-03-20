@@ -6,26 +6,27 @@ const express = require('express')
 var request = require('request');
 var bodyParser = require('body-parser')
 const axios = require('axios');
-
+const cors = require('cors');
 const mockAPIResponse = require('./mockAPI.js')
 
 
 const app = express()
 app.use(bodyParser.json())
 app.use(express.static('dist'))
-
+app.use(cors())
 
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile('dist/index.html')
+    //res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
 
 
 //evaluating URL post request
 app.post('/evaluate',async  function (req, res) {
-    console.log(req.body)
+   
     const {url}= req.body
+    console.log(url)
 
     var meaningcloudUrl = `https://api.meaningcloud.com/sentiment-2.1?key=${process.env.API_KEY}&url=${url}&lang=en`
     var analysis;
@@ -37,6 +38,9 @@ app.post('/evaluate',async  function (req, res) {
         "subjectivity":response.data.subjectivity,
         "confidence":response.data.confidence,
         "irony":response.data.irony}
+
+        console.log(analysis);
+
       })
       .catch(function (error) {
         console.log(error);
