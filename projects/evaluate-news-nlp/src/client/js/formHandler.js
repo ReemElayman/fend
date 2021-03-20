@@ -3,8 +3,9 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let url = document.getElementById('url').value
-    console.log(url)
-    //Client.checkForName(formText)
+    if(Client.checkForName(url)){
+    
+    
 
 
 
@@ -45,6 +46,9 @@ function handleSubmit(event) {
         </table>`;
             console.log(data)
         });
+      }else{
+        document.getElementById("analysis").innerHTML='<p id="err">Invalid URL please enter a valid one.</p>'
+      }
 }
 
 export { handleSubmit }
