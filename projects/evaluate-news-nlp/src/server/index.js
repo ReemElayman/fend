@@ -52,10 +52,13 @@ app.post('/evaluate',async  function (req, res) {
 
 
 // designates what port the app will listen to for incoming requests
-app.listen(8082, function () {
+const server=app.listen(8082, function () {
     console.log('Example app listening on port 8082!')
 })
 
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+
+
+module.exports = server;

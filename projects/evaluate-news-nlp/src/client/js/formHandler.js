@@ -3,10 +3,8 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let url = document.getElementById('url').value
-    if(Client.checkForName(url)){
+    if(Client.checkForURL(url)){
     
-    
-
 
 
     document.getElementById("analysis").innerHTML='<p id="msg">waiting for the results ....</p>'

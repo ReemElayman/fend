@@ -1,5 +1,5 @@
 var validUrl = require('valid-url');
-function checkForName(inputText) {
+function checkForURL(inputText) {
     console.log("::: Running checkForName :::", inputText);
     if (validUrl.isUri(inputText)){
         console.log('Looks like an URI');
@@ -10,4 +10,4 @@ function checkForName(inputText) {
     }
 }
 
-export { checkForName }
+export { checkForURL }
